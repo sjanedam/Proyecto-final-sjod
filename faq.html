@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ENTRE10TE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        body {
+            background-color: lightgoldenrodyellow;    
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <img src="media/adivina.png" height="50px" >
+            </a>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="about.html" class="nav-link px-2 link-dark">Sobre nosotros</a></li>
+                <li><a href="faq.html" class="nav-link px-2 link-dark">FAQ</a></li>
+                <li><a href="media/aplicacion.txt" class="btn btn-success" download>Descarga ENTRE10TE</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="container">
+        <!-- MAIN -->
+	<main>
+		<div class="container mt-3 my-2">
+			<!-- BREADCRUMB -->
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item" aria-current="page" th:if="${session.username != null}">
+							<a href="/home">Inicio</a>
+						</li>
+						<li class="breadcrumb-item" aria-current="page" th:unless="${session.username != null}">
+							<a href="/">Inicio</a>
+						</li>
+						<li  class="breadcrumb-item active" aria-current="page">Preguntas frecuentes</li>
+					</ol>
+				</nav>
+			<!-- FIN BREADCRUMB -->
+			<h1>Preguntas frecuentes</h1>
+			<hr>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						¿Qué es M4U - Music 4 You?
+						</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>M4U o Music 4 You es una página web que simula una página web para una tienda online y física de música y merchandising.</p>
+							<p>
+							Es una página web que funciona con herramientas que hemos dado en clase, tales como Thymeleaf, Springboot, Bootstrap5,
+							HTML5, JavaScript, CSS, Maven y lenguaje SQL.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							La interfaz de M4U
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>La interfaz de M4U está basada en tiendas onlines similares, tales como:</p>
+							<ul class="list-group">
+								<li class="list-group-item">Omega Center: <a href="https://www.omegacenter.es/" target="_blank" class="link-dark"><small>Dirígete a la página!</small></a></li>
+								<li class="list-group-item">Amazon: <a href="https://www.amazon.es/" target="_blank" class="link-dark"><small>Dirígete a la página!</small></a></li>
+								<li class="list-group-item">Fnac: <a href="https://www.fnac.es/" target="_blank" class="link-dark"><small>Dirígete a la página!</small></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							¿Cómo funciona M4U?
+						</button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>M4U funciona con una base de datos.</p>
+							<p>Si no hay nada en la base de datos, toda la información que aparece en la página web es estática.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingFour">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+							¿Dónde estamos?
+						</button>
+					</h2>
+					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>Nos encontramos en:</p>
+							<p><strong>C. Tolosa, 2, 4, 28041 Madrid.</strong></p>
+							<p>Para más información, <a class="link-dark" href="/contacto"><i>pulse aquí.</i></a></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingFive">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+							¿Cuáles son nuestros horarios?
+						</button>
+					</h2>
+					<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<h6>M4U se encuentra en la C/ Tolosa, 2, 4, 28041 Madrid.</h6>
+							<p>Y nuestro horario es de:</p>
+							<ul>
+								<li><strong>Lunes a viernes:</strong> 09:00 a 16:00 y 17:00 a 22:00</li>
+								<li><strong>Sábados y domingos</strong> 09:00 a 21:00</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingSix">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+							¿Qué vendemos?
+						</button>
+					</h2>
+					<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>Vendemos diferentes productos: álbumes y merchandising de tus artistas favoritos. Por ejemplo:</p>
+							<ul class="list-group">
+								<li class="list-group-item">Discos tanto vinilo como CD para tener la música de tus artistas favoritos en casa.</li>
+								<li class="list-group-item">Sudaderas, camisetas, chaquetas, bolsos y accesorios de ropa para los más fashionistas.</li>
+								<li class="list-group-item">Accesorios en general, como llaveros, pins o chapas, si lo que buscas es discreción.</li>
+								<li class="list-group-item">Y para los más fanáticos, peluches, figuras y pósters.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</main>
+    
+    </div>
+</body>
+
+</html>
